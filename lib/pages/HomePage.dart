@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:solution/widgets/drawer.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,6 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  DateTime? lastPressed; //LastPressed Variable For Double Tap to Close
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,37 +32,31 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       drawer: MyDrawer(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-            children: [
-              DefaultTextStyle(
-                style: const TextStyle(
-                    fontSize: 40.0,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Horizon',
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w600),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TyperAnimatedText('Homework Completed By:',
-                        textStyle: TextStyle(
-                            fontFamily: 'Bobbers',
-                            fontSize: 30,
-                            color: Colors.redAccent)),
-                    RotateAnimatedText('Saroj',
-                        textStyle: TextStyle(color: Colors.blue)),
-                    RotateAnimatedText('Kumar',
-                        textStyle: TextStyle(color: Colors.lightGreen)),
-                    RotateAnimatedText('Yadav',
-                        textStyle: TextStyle(color: Colors.pink)),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+      // ए willpopScope जो है वहा से Double Tap To close App के कोड स्टार्ट हुआ है
+      body: WillPopScope(
+        onWillPop: () async {
+          final now = DateTime.now();
+          final maxDuration = Duration(seconds: 2);
+          final isWarning =
+              lastPressed == null || now.difference(lastPressed!) > maxDuration;
+          if (isWarning) {
+            lastPressed = DateTime.now();
+
+            final snackBar = SnackBar(
+              content: Text('Double Tap To Close App'),
+              duration: maxDuration,
+            );
+
+            ScaffoldMessenger.of(context)
+              ..removeCurrentSnackBar()
+              ..showSnackBar(snackBar);
+            return false;
+          } else {
+            return true;
+          }
+        },
+        // Code end Here of DOuble tap
+        child: Column(),
       ),
     );
   }

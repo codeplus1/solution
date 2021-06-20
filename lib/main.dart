@@ -3,6 +3,7 @@ import 'package:solution/pages/HomePage.dart';
 import 'package:solution/pages/Splash.dart';
 import 'package:solution/pages/Square.dart';
 import 'package:solution/pages/calculator.dart';
+import 'package:solution/pages/calculator/Calculate.dart';
 import 'package:solution/pages/circle.dart';
 import 'package:solution/pages/interest.dart';
 import 'package:solution/pages/rectangle.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         "/rectangle": (_) => Rectangle(),
         "/temperature": (_) => Temperature(),
         "/square": (_) => Square(),
+        "/calculate": (_) => Calculate(),
       },
     );
   }

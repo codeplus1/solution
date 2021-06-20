@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -89,6 +92,32 @@ class _MyDrawerState extends State<MyDrawer> {
                 color: Colors.blue[200],
               ),
               title: Text("Square"),
+            ),
+
+            ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, "/calculate");
+              },
+              leading: Icon(
+                Icons.calculate_outlined,
+                color: Colors.blue[200],
+              ),
+              title: Text("Calculate"),
+            ),
+            Divider(
+              thickness: 2,
+            ),
+            ListTile(
+              onTap: () {
+                if (Platform.isAndroid) {
+                  SystemNavigator.pop();
+                }
+              },
+              leading: Icon(
+                Icons.exit_to_app,
+                color: Colors.blue[200],
+              ),
+              title: Text("Exit From App"),
             ),
           ],
         ),
