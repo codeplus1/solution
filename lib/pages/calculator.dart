@@ -16,6 +16,7 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
         title: Text("Calculator"),
       ),
       body: SingleChildScrollView(

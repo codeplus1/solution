@@ -17,6 +17,7 @@ class _RectangleState extends State<Rectangle> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
         title: Text("Rectangle"),
       ),
       body: SingleChildScrollView(

@@ -20,6 +20,7 @@ class _InterestState extends State<Interest> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
         title: Text("Simple Interest"),
       ),
       body: SingleChildScrollView(

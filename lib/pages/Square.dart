@@ -15,6 +15,7 @@ class _SquareState extends State<Square> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
         title: Text("Square"),
       ),
       body: SingleChildScrollView(

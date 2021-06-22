@@ -31,7 +31,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.calculate,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("Calculator"),
             ),
@@ -42,7 +42,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.circle_outlined,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("circle"),
             ),
@@ -53,7 +53,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.attach_money,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("Simple Interest"),
             ),
@@ -64,7 +64,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.texture_outlined,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("Rectangle"),
             ),
@@ -89,7 +89,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.crop_square_sharp,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("Square"),
             ),
@@ -100,7 +100,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.calculate_outlined,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("Calculate"),
             ),
@@ -115,7 +115,7 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.exit_to_app,
-                color: Colors.blue[200],
+                color: Colors.blue,
               ),
               title: Text("Exit From App"),
             ),

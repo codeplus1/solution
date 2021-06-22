@@ -1,7 +1,8 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// Widget textEntry(String hint) {
-//   return TextField(
-//     decoration: InputDecoration(hintText: hint),
-//   );
-// }
+Widget textEntry(String hint, TextEditingController controller) {
+  return TextField(
+    controller: controller,
+    decoration: InputDecoration(hintText: hint),
+  );
+}

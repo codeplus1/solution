@@ -9,6 +9,7 @@ class Calculate extends StatefulWidget {
 
 class _CalculateState extends State<Calculate> {
   int first = 0, second = 0; //Two value for calculate + - x /
+
   Widget customOutlineButton(String value) {
     return Expanded(
       // ignore: deprecated_member_use

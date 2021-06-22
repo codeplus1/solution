@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solution/widgets/TextEntry.dart';
 
 class Circle extends StatefulWidget {
   const Circle({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ class _CircleState extends State<Circle> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
         title: Text("Circle"),
       ),
       body: SingleChildScrollView(
@@ -24,10 +26,7 @@ class _CircleState extends State<Circle> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TextField(
-                controller: radius,
-                decoration: InputDecoration(hintText: 'Enter Radius'),
-              ),
+              textEntry('Enter Radius', radius),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

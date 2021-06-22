@@ -17,6 +17,7 @@ class _TemperatureState extends State<Temperature> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
         title: Text("Temperature Conversion"),
       ),
       body: SingleChildScrollView(

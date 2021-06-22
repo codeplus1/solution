@@ -9,12 +9,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  DateTime? lastPressed; //LastPressed Variable For Double Tap to Close
+  DateTime? lastPressed; // LastPressed Variable For Double Tap to Close
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xee0722),
+        // backgroundColor: Colors.red[600],
         leading: Builder(
           builder: (context) => IconButton(
             onPressed: () {
@@ -23,12 +25,26 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.sort,
               size: 50,
+              color: Colors.black87,
             ),
           ),
         ),
-        title: Text(
-          'Homepage',
-          style: TextStyle(fontWeight: FontWeight.w800),
+        title: InkWell(
+          child: ListTile(
+            onTap: () {},
+            trailing: Image.asset(
+              "assets/solution1.png",
+              fit: BoxFit.cover,
+            ),
+            title: Text(
+              'Solutions',
+              textScaleFactor: 1.8,
+              style: TextStyle(
+                  color: Colors.black,
+                  // fontSize: 25,
+                  fontWeight: FontWeight.w700),
+            ),
+          ),
         ),
       ),
       drawer: MyDrawer(),
@@ -56,7 +72,20 @@ class _HomePageState extends State<HomePage> {
           }
         },
         // Code end Here of DOuble tap
-        child: Column(),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                child: Image.asset(
+                  "assets/solution2.png",
+                  fit: BoxFit.cover,
+                ),
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
