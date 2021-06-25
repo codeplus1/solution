@@ -8,6 +8,7 @@ import 'package:solution/pages/circle.dart';
 import 'package:solution/pages/interest.dart';
 import 'package:solution/pages/rectangle.dart';
 import 'package:solution/pages/tempConvert.dart';
+import 'package:solution/pages/village.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         "/temperature": (_) => Temperature(),
         "/square": (_) => Square(),
         "/calculate": (_) => Calculate(),
+        "/village": (_) => VillageInterest(),
       },
     );
   }

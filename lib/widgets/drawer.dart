@@ -21,7 +21,7 @@ class _MyDrawerState extends State<MyDrawer> {
               accountName: Text("Saroj Yadav"),
               accountEmail: Text('sarojyadav88505@gmail.com'),
               currentAccountPicture: CircleAvatar(
-                child: Text("SY"),
+                child: Text("SJ"),
               ),
             ),
             // Calculator
@@ -103,6 +103,16 @@ class _MyDrawerState extends State<MyDrawer> {
                 color: Colors.blue,
               ),
               title: Text("Calculate"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, "/village");
+              },
+              leading: Icon(
+                Icons.monetization_on_outlined,
+                color: Colors.blue,
+              ),
+              title: Text("ब्याज"),
             ),
             Divider(
               thickness: 2,
