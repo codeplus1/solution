@@ -31,11 +31,23 @@ class _VillageInterestState extends State<VillageInterest> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            textEntry('मूल रकम ', principle),
-            textEntry('ब्याजदर', rate),
-            textEntry('समय अवधि', time),
+            Card(
+              elevation: 10,
+              shadowColor: Colors.red,
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    textEntry('मूल रकम ', principle),
+                    textEntry('ब्याजदर', rate),
+                    textEntry('समय अवधि', time),
+                  ],
+                ),
+              ),
+            ),
             SizedBox(height: 10),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ElevatedButton(
                   onPressed: () {
@@ -47,7 +59,7 @@ class _VillageInterestState extends State<VillageInterest> {
                     Text(jb.toString());
                     setState(() {});
                   },
-                  child: Text('Calculate Interest'),
+                  child: Text('हिसाब गर्नुहोस्'),
                 ),
                 SizedBox(
                   height: 20,
